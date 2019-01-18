@@ -61,5 +61,5 @@ def get_average_age_for_season(data, season)
       end 
     end 
   end
-  average_array.inject{
+    (average_array.inject{|x, y| x + y}.to_f / average_array.length).round
 end
