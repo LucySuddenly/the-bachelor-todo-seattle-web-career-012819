@@ -51,13 +51,15 @@ def get_occupation(data, hometown)
 end
 
 def get_average_age_for_season(data, season)
-  
+  average_array = []
   data.each do |season_number, contestants|
     contestants.each do |contestant|
       contestant.each do |attribute, value|
-
+        if season == season_number
+          average_array << contestant["age"].to_i
         end
       end 
     end 
   end
+  average_array.inject
 end
